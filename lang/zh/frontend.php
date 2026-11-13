@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'nav_home' => '首页',
+    'nav_about' => '关于我',
+    'nav_projects' => '项目作品',
+    'nav_contact' => '联系我',
+    'hero_greeting' => '你好，我是',
+    'hero_role' => '软件工程师 & 跆拳道教练',
+    'hero_cta' => '联系我',
+    'hero_view_work' => '查看作品',
+    'featured_skills' => '我能做什么',
+    'featured_skills_desc' => '我的技术栈一览。',
+    'featured_projects' => '精选项目',
+    'featured_projects_desc' => '最近做的一些作品。',
+    'view_all_projects' => '查看全部项目',
+    'footer_rights' => '保留所有权利。',
+    'built_with' => '使用 Laravel & Tailwind 构建。',
+    'contact_title' => '联系我',
+    'contact_desc' => '有项目想合作，或者只是想打个招呼？欢迎随时找我。',
+    'contact_name' => '您的姓名',
+    'contact_email' => '您的邮箱',
+    'contact_message' => '留言内容',
+    'contact_send' => '发送留言',
+    'contact_success' => '谢谢！您的留言已成功发送。',
+    'contact_error' => '糟糕！出了点问题，请检查表单后重试。',
+    'contact_connect' => '与我联系',
+];

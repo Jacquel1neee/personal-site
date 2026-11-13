@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'nav_home' => 'Home',
+    'nav_about' => 'About',
+    'nav_projects' => 'Projects',
+    'nav_contact' => 'Contact',
+    'hero_greeting' => "Hi, I'm",
+    'hero_role' => 'Software Engineer & Taekwondo Coach',
+    'hero_cta' => 'Get in touch',
+    'hero_view_work' => 'View my work',
+    'featured_skills' => 'What I do',
+    'featured_skills_desc' => 'A glimpse of my technical toolkit.',
+    'featured_projects' => 'Featured Projects',
+    'featured_projects_desc' => 'A few things I have built recently.',
+    'view_all_projects' => 'View all projects',
+    'footer_rights' => 'All rights reserved.',
+    'built_with' => 'Built with Laravel & Tailwind.',
+    'contact_title' => 'Get in touch',
+    'contact_desc' => "Have a project in mind or just want to say hi? I'd love to hear from you.",
+    'contact_name' => 'Your Name',
+    'contact_email' => 'Your Email',
+    'contact_message' => 'Message',
+    'contact_send' => 'Send Message',
+    'contact_success' => 'Thank you! Your message has been sent successfully.',
+    'contact_error' => 'Oops! Something went wrong. Please check the form and try again.',
+    'contact_connect' => 'Connect with me',
+];
