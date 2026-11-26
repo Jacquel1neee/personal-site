@@ -50,7 +50,13 @@ class AchievementController extends Controller
             'issuer_zh' => 'required|string|max:255',
             'issuer_en' => 'required|string|max:255',
             'year' => 'required|string|max:10',
+            'type' => 'required|string|max:50', 
+            'custom_type' => 'nullable|string|max:50', 
         ]);
+
+        if ($validated['type'] === 'Other') {
+            $validated['type'] = $validated['custom_type'] ?? 'Other';
+        }
 
         $achievement->update($validated);
 

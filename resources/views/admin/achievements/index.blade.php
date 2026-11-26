@@ -24,6 +24,7 @@
             <thead class="border-b border-zinc-200 bg-zinc-50 text-xs uppercase text-zinc-500 dark:border-zinc-800 dark:bg-zinc-900/50 dark:text-zinc-400">
                 <tr>
                     <th class="px-6 py-3 font-medium">{{ __('admin.name') }}</th>
+                    <th class="px-6 py-3 font-medium">{{ __('admin.ach_type') }}</th>
                     <th class="px-6 py-3 font-medium">{{ __('admin.ach_issuer_zh') }}</th>
                     <th class="px-6 py-3 font-medium">{{ __('admin.ach_year') }}</th>
                     <th class="px-6 py-3 font-medium text-right">{{ __('admin.actions') }}</th>
@@ -33,6 +34,11 @@
                 @forelse($achievements as $ach)
                     <tr class="transition hover:bg-zinc-50 dark:hover:bg-zinc-800/50">
                         <td class="px-6 py-4 font-medium">{{ app()->getLocale() === 'zh' ? $ach->title_zh : $ach->title_en }}</td>
+                        <td class="px-6 py-4">
+                            <span class="inline-flex items-center rounded-full bg-yellow-50 px-2.5 py-0.5 text-xs font-medium text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400">
+                                {{ $ach->type }}
+                            </span>
+                        </td>
                         <td class="px-6 py-4 text-zinc-500 dark:text-zinc-400">{{ app()->getLocale() === 'zh' ? $ach->issuer_zh : $ach->issuer_en }}</td>
                         <td class="px-6 py-4">{{ $ach->year }}</td>
                         <td class="px-6 py-4 text-right">
@@ -46,7 +52,7 @@
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="4" class="px-6 py-8 text-center text-zinc-500 dark:text-zinc-400">{{ __('admin.no_achievements') }}</td>
+                        <td colspan="5" class="px-6 py-8 text-center text-zinc-500 dark:text-zinc-400">{{ __('admin.no_achievements') }}</td>
                     </tr>
                 @endforelse
             </tbody>

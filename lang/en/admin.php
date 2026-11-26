@@ -187,4 +187,8 @@ return [
     'ach_success_added' => 'Achievement added successfully.',
     'ach_success_updated' => 'Achievement updated successfully.',
     'ach_success_deleted' => 'Achievement deleted successfully.',
+    'ach_type' => 'Type',
+    'ach_type_select' => 'Select Type...',
+    'ach_custom_type' => 'New Type Name (Remark)',
+    'ach_type_hint' => 'E.g., Academic, Sports, Work',
 ];

@@ -53,6 +53,33 @@
                    class="w-full rounded-lg border-zinc-300 bg-white px-3 py-2 text-sm focus:border-blue-500 focus:ring-blue-500 dark:border-zinc-700 dark:bg-zinc-900">
         </div>
 
+        {{-- Type 分类下拉框 --}}
+        <div>
+            <label class="block text-sm font-medium mb-1">{{ __('admin.ach_type') }}</label>
+            <select name="type" id="type-select" required
+                    class="w-full rounded-lg border-zinc-300 bg-white px-3 py-2 text-sm focus:border-blue-500 focus:ring-blue-500 dark:border-zinc-700 dark:bg-zinc-900">
+                <option value="">{{ __('admin.ach_type_select') }}</option>
+                <option value="Academic" {{ old('type', $achievement->type) === 'Academic' ? 'selected' : '' }}>Academic / 学术</option>
+                <option value="Sports" {{ old('type', $achievement->type) === 'Sports' ? 'selected' : '' }}>Sports / 运动</option>
+                <option value="Work" {{ old('type', $achievement->type) === 'Work' ? 'selected' : '' }}>Work / 工作</option>
+                
+                {{-- 如果当前的 type 是自定义的，把它显示出来 --}}
+                @if(!in_array($achievement->type, ['Academic', 'Sports', 'Work', 'Other']))
+                    <option value="{{ $achievement->type }}" selected>{{ $achievement->type }}</option>
+                @endif
+                
+                <option value="Other" {{ old('type', $achievement->type) === 'Other' ? 'selected' : '' }}>Other (Custom) / 其他</option>
+            </select>
+        </div>
+
+        {{-- 自定义 Type 输入框 --}}
+        <div id="custom-type-container" class="hidden">
+            <label class="block text-sm font-medium mb-1">{{ __('admin.ach_custom_type') }}</label>
+            <input type="text" name="custom_type" id="custom-type-input" value="{{ old('custom_type') }}"
+                   class="w-full rounded-lg border-zinc-300 bg-white px-3 py-2 text-sm focus:border-blue-500 focus:ring-blue-500 dark:border-zinc-700 dark:bg-zinc-900">
+            <p class="mt-1 text-xs text-zinc-500">{{ __('admin.ach_type_hint') }}</p>
+        </div>
+
         <div class="flex items-center gap-4 pt-4">
             <button type="submit" class="rounded-full bg-zinc-900 px-6 py-2 text-sm font-medium text-white transition hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200">
                 {{ __('admin.update_achievement') }}
@@ -60,4 +87,23 @@
             <a href="{{ route('admin.achievements.index') }}" class="text-sm text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200">{{ __('admin.cancel') }}</a>
         </div>
     </form>
+
+    <script>
+        const typeSelect = document.getElementById('type-select');
+        const customTypeContainer = document.getElementById('custom-type-container');
+        const customTypeInput = document.getElementById('custom-type-input');
+
+        function toggleCustomType() {
+            if (typeSelect.value === 'Other') {
+                customTypeContainer.classList.remove('hidden');
+                customTypeInput.required = true;
+            } else {
+                customTypeContainer.classList.add('hidden');
+                customTypeInput.required = false;
+            }
+        }
+
+        typeSelect.addEventListener('change', toggleCustomType);
+        toggleCustomType();
+    </script>
 @endsection

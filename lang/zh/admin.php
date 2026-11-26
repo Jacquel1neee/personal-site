@@ -168,4 +168,8 @@ return [
     'msg_success_deleted'=> '留言删除成功。',
     'msg_success_read'   => '留言已标记为已读。',
     'msg_success_unread' => '留言已标记为未读。',
+    'ach_type' => '分类',
+    'ach_type_select' => '选择分类...',
+    'ach_custom_type' => '新分类名称（备注）',
+    'ach_type_hint' => '例如：学术、运动、工作',
 ];

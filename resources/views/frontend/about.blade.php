@@ -74,7 +74,13 @@
                         <div class="text-4xl text-yellow-500">🏆</div>
                         <div>
                             <h3 class="font-semibold text-lg">{{ app()->getLocale() === 'zh' ? $ach->title_zh : $ach->title_en }}</h3>
-                            <p class="text-sm text-zinc-500 dark:text-zinc-400">{{ app()->getLocale() === 'zh' ? $ach->issuer_zh : $ach->issuer_en }} • {{ $ach->year }}</p>
+                            
+                            {{-- 显示分类标签 --}}
+                            <span class="inline-block mt-1 rounded-full bg-yellow-50 px-2 py-0.5 text-[10px] font-medium text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400">
+                                {{ $ach->type }}
+                            </span>
+                            
+                            <p class="mt-1 text-sm text-zinc-500 dark:text-zinc-400">{{ app()->getLocale() === 'zh' ? $ach->issuer_zh : $ach->issuer_en }} • {{ $ach->year }}</p>
                         </div>
                     </div>
                 @endforeach
