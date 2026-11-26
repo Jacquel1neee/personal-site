@@ -95,6 +95,7 @@
                         ['route' => 'admin.hobbies.index',  'label' => __('admin.hobbies'),  'icon' => 'heart'],
                         ['route' => 'admin.social-links.index',  'label' => __('admin.social_links'),  'icon' => 'link'],
                         ['route' => 'admin.messages.index',  'label' => __('admin.messages'),  'icon' => 'mail'],
+                        ['route' => 'admin.achievements.index',  'label' => __('admin.achievements'),  'icon' => 'trophy'],
                     ];
                 @endphp
 

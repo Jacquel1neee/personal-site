@@ -168,4 +168,23 @@ return [
     'msg_success_deleted'=> 'Message deleted successfully.',
     'msg_success_read'   => 'Message marked as read.',
     'msg_success_unread' => 'Message marked as unread.',
+
+        // ==========================================
+    // ACHIEVEMENTS (成就)
+    // ==========================================
+    'achievements' => 'Achievements',
+    'achievements_desc' => 'Manage your awards and achievements.',
+    'add_achievement' => 'Add Achievement',
+    'edit_achievement' => 'Edit Achievement',
+    'ach_title_zh' => 'Title (Chinese)',
+    'ach_title_en' => 'Title (English)',
+    'ach_issuer_zh' => 'Issuer (Chinese)',
+    'ach_issuer_en' => 'Issuer (English)',
+    'ach_year' => 'Year',
+    'save_achievement' => 'Save Achievement',
+    'update_achievement' => 'Update Achievement',
+    'no_achievements' => 'No achievements found.',
+    'ach_success_added' => 'Achievement added successfully.',
+    'ach_success_updated' => 'Achievement updated successfully.',
+    'ach_success_deleted' => 'Achievement deleted successfully.',
 ];

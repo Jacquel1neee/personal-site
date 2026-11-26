@@ -23,12 +23,13 @@ class FrontendController extends Controller
         return view('frontend.home', compact('profile', 'skills', 'projects', 'socialLinks'));
     }
 
-    public function about()
+        public function about()
     {
         $profile = Profile::first();
         $experiences = Experience::orderBy('sort_order', 'desc')->get();
         $hobbies = Hobby::orderBy('sort_order')->get();
-        return view('frontend.about', compact('profile', 'experiences', 'hobbies'));
+        $achievements = \App\Models\Achievement::orderBy('sort_order', 'desc')->get(); // 新增这一行
+        return view('frontend.about', compact('profile', 'experiences', 'hobbies', 'achievements')); // 增加 $achievements
     }
 
     public function projects()
@@ -58,4 +59,6 @@ class FrontendController extends Controller
 
         return redirect()->back()->with('success', __('frontend.contact_success'));
     }
+
+
 }

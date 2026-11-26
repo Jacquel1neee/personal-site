@@ -25,4 +25,23 @@ return [
     'contact_success' => '谢谢！您的留言已成功发送。',
     'contact_error' => '糟糕！出了点问题，请检查表单后重试。',
     'contact_connect' => '与我联系',
+
+    // ==========================================
+    // ACHIEVEMENTS (成就)
+    // ==========================================
+    'achievements' => '成就',
+    'achievements_desc' => '管理您的奖项和成就。',
+    'add_achievement' => '添加成就',
+    'edit_achievement' => '编辑成就',
+    'ach_title_zh' => '成就名称 (中文)',
+    'ach_title_en' => '成就名称 (英文)',
+    'ach_issuer_zh' => '颁发机构 (中文)',
+    'ach_issuer_en' => '颁发机构 (英文)',
+    'ach_year' => '年份',
+    'save_achievement' => '保存成就',
+    'update_achievement' => '更新成就',
+    'no_achievements' => '暂无成就。',
+    'ach_success_added' => '成就添加成功。',
+    'ach_success_updated' => '成就更新成功。',
+    'ach_success_deleted' => '成就删除成功。',
 ];

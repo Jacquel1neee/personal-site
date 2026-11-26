@@ -64,6 +64,24 @@
         </div>
     </section>
 
+    {{-- 成就展示 --}}
+    <section class="bg-zinc-50 py-20 dark:bg-zinc-950">
+        <div class="mx-auto max-w-4xl px-6">
+            <h2 class="mb-12 text-center text-2xl font-bold tracking-tight">Achievements / 成就</h2>
+            <div class="grid gap-4 sm:grid-cols-2">
+                @foreach($achievements as $ach)
+                    <div class="flex items-center gap-4 rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900 transition hover:shadow-md">
+                        <div class="text-4xl text-yellow-500">🏆</div>
+                        <div>
+                            <h3 class="font-semibold text-lg">{{ app()->getLocale() === 'zh' ? $ach->title_zh : $ach->title_en }}</h3>
+                            <p class="text-sm text-zinc-500 dark:text-zinc-400">{{ app()->getLocale() === 'zh' ? $ach->issuer_zh : $ach->issuer_en }} • {{ $ach->year }}</p>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
     {{-- 兴趣爱好 --}}
     <section class="py-20">
         <div class="mx-auto max-w-5xl px-6">
